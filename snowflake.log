@@ -1,0 +1,24 @@
+{"level":"INFO","message":"[6:10:08.398 AM]: Creating new connection object"}
+{"level":"INFO","message":"[6:10:08.412 AM]: Creating Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] with host: abc12345.us-east-1.snowflakecomputing.com, account: abc12345, accessUrl: https://abc12345.us-east-1.snowflakecomputing.com, user: your_user, password is provided, role: ACCOUNTADMIN, database: NIGHTSHIFT, schema: PUBLIC, warehouse: NIGHTSHIFT_WH, region: us-east-1, authenticator: SNOWFLAKE, ocsp mode: FAIL_OPEN, os: linux, os version: 6.18.44-fc-v22"}
+{"level":"INFO","message":"[6:10:08.413 AM]: Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] additional details: passcode in password is provided, passcode is not provided, private key is not provided, application: undefined, client name: snowflake-sdk, client version: 1.15.0, retry timeout: 300, private key path: undefined, private key pass is not provided, client store temporary credential: false, browser response timeout: 120000"}
+{"level":"INFO","message":"[6:10:08.414 AM]: Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] - connection object created successfully."}
+{"level":"INFO","message":"[6:10:09.461 AM]: Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] - connecting. Associated Snowflake domain: GLOBAL"}
+{"level":"INFO","message":"[6:10:09.462 AM]: Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] - authentication successful using: SNOWFLAKE"}
+{"level":"INFO","message":"[6:10:09.463 AM]: Trying to initialize Easy Logging"}
+{"level":"INFO","message":"[6:10:09.464 AM]: No client config detected."}
+{"level":"INFO","message":"[6:10:09.465 AM]: No config file path found. Client config will not be used."}
+{"level":"INFO","message":"[6:10:09.465 AM]: Easy Logging is disabled as no config has been found"}
+{"level":"INFO","message":"[6:10:09.468 AM]: Connection[id: f563fdfd-e817-4d21-a686-d7af5e879dd5] - connected successfully after 7.120456999999988 milliseconds"}
+{"level":"WARN","message":"[6:10:09.636 AM]: WARNING!!! using fail-open to connect. Driver is connecting to an HTTPS endpoint without OCSP based Certificated Revocation checking as it could not obtain a valid OCSP Response to use from the CA OCSP responder. Details: Error: AuthorityInfoAccess not found in extensions"}
+{"level":"INFO","message":"[6:10:24.308 AM]: Creating new connection object"}
+{"level":"INFO","message":"[6:10:24.319 AM]: Creating Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] with host: abc12345.us-east-1.snowflakecomputing.com, account: abc12345, accessUrl: https://abc12345.us-east-1.snowflakecomputing.com, user: your_user, password is provided, role: ACCOUNTADMIN, database: NIGHTSHIFT, schema: PUBLIC, warehouse: NIGHTSHIFT_WH, region: us-east-1, authenticator: SNOWFLAKE, ocsp mode: FAIL_OPEN, os: linux, os version: 6.18.44-fc-v22"}
+{"level":"INFO","message":"[6:10:24.320 AM]: Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] additional details: passcode in password is provided, passcode is not provided, private key is not provided, application: undefined, client name: snowflake-sdk, client version: 1.15.0, retry timeout: 300, private key path: undefined, private key pass is not provided, client store temporary credential: false, browser response timeout: 120000"}
+{"level":"INFO","message":"[6:10:24.320 AM]: Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] - connection object created successfully."}
+{"level":"INFO","message":"[6:10:25.883 AM]: Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] - connecting. Associated Snowflake domain: GLOBAL"}
+{"level":"INFO","message":"[6:10:25.884 AM]: Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] - authentication successful using: SNOWFLAKE"}
+{"level":"INFO","message":"[6:10:25.885 AM]: Trying to initialize Easy Logging"}
+{"level":"INFO","message":"[6:10:25.886 AM]: No client config detected."}
+{"level":"INFO","message":"[6:10:25.886 AM]: No config file path found. Client config will not be used."}
+{"level":"INFO","message":"[6:10:25.887 AM]: Easy Logging is disabled as no config has been found"}
+{"level":"INFO","message":"[6:10:25.890 AM]: Connection[id: ddafcc72-f85f-4d00-8af1-1c23be8ea175] - connected successfully after 6.227991999999858 milliseconds"}
+{"level":"WARN","message":"[6:10:25.991 AM]: WARNING!!! using fail-open to connect. Driver is connecting to an HTTPS endpoint without OCSP based Certificated Revocation checking as it could not obtain a valid OCSP Response to use from the CA OCSP responder. Details: Error: AuthorityInfoAccess not found in extensions"}

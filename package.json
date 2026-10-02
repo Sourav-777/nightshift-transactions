@@ -1,0 +1,20 @@
+{
+  "name": "nightshift-transactions",
+  "version": "1.0.0",
+  "description": "Local live-transaction console for Nightshift Espresso Co. — writes to MySQL + Snowflake and streams to Power BI.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "node-fetch": "^2.7.0",
+    "snowflake-sdk": "^1.14.0",
+    "uuid": "^9.0.1"
+  }
+}

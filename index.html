@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nightshift Espresso Co. — Live Order Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">☕</span>
+      <div class="brand-text">
+        <h1>Nightshift Espresso Co.</h1>
+        <p>Live Order Console</p>
+      </div>
+    </div>
+    <div class="status-row" id="statusRow">
+      <span class="pill" id="pill-mysql">MySQL <i class="dot"></i></span>
+      <span class="pill" id="pill-snowflake">Snowflake <i class="dot"></i></span>
+      <span class="pill" id="pill-powerbi">Power BI <i class="dot"></i></span>
+    </div>
+  </header>
+
+  <section class="stats-strip" id="statsStrip">
+    <div class="stat">
+      <span class="stat-label">Orders today</span>
+      <span class="stat-value" id="statOrders">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Gross sales</span>
+      <span class="stat-value" id="statGross">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Refunded</span>
+      <span class="stat-value" id="statRefunded">—</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Last synced</span>
+      <span class="stat-value" id="statSynced">—</span>
+    </div>
+  </section>
+
+  <main class="layout">
+
+    <section class="panel order-panel">
+      <h2>Ring in an order</h2>
+      <form id="orderForm">
+
+        <label>
+          Store
+          <select id="f_store" required></select>
+        </label>
+
+        <label>
+          Barista
+          <select id="f_barista" required></select>
+        </label>
+
+        <label>
+          Customer name <span class="optional">(optional — leave blank for walk-in)</span>
+          <input type="text" id="f_customer" placeholder="Walk-in" />
+        </label>
+
+        <label>
+          Item
+          <select id="f_product" required></select>
+        </label>
+
+        <div class="field-row">
+          <label>
+            Qty
+            <input type="number" id="f_qty" min="1" value="1" required />
+          </label>
+          <label>
+            Unit price
+            <input type="number" id="f_price" min="0" step="0.01" required />
+          </label>
+        </div>
+
+        <label>
+          Payment method
+          <select id="f_payment" required></select>
+        </label>
+
+        <label>
+          Order channel
+          <select id="f_channel" required></select>
+        </label>
+
+        <button type="submit" id="submitBtn">Print ticket</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </section>
+
+    <section class="panel feed-panel">
+      <div class="feed-header">
+        <h2>Live ticket feed</h2>
+        <span class="feed-sub">writes to MySQL + Snowflake · streams to Power BI</span>
+      </div>
+      <div class="ticket-feed" id="ticketFeed">
+        <p class="empty-state">No tickets yet tonight. Ring one in.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
