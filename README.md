@@ -129,8 +129,48 @@ an order, with no refresh button involved.
 
 ## Adapting this to a different dataset
 
+
+
 The "interesting" part is just the domain model. To repurpose this for, say,
 ride-share trips or ticket sales: rename the columns in `sql/*.sql`,
 `db/*.js`, `server.js`'s reference-data arrays, and the ticket template in
 `public/app.js`. The write-to-both-databases-then-push-to-Power-BI pattern
 stays identical.
+
+-----------------------
+#### Analysis and Demo Results
+
+The optional seed script creates sample transactions across approximately two weeks. The figures below describe that seeded demo data; they are not real café sales.
+
+| Metric | Result |
+|---|---:|
+| Transactions | [number] |
+| Completed sales | [amount] |
+| Refund rate | [percentage] |
+| Average order value | [amount] |
+| Busiest hour | [hour and transaction count] |
+| Top-selling product | [product and quantity] |
+| Most-used payment method | [method and percentage] |
+
+### Findings
+
+- **Sales by hour:** [Describe the busiest or quietest period and what it could mean for staffing.]
+- **Products:** [Name the top product by units sold or sales amount; say which measure you used.]
+- **Refunds and status:** [Report the refunded share of transactions and any notable pattern.]
+- **Payment methods:** [Name the most-used method and its share of transactions.]
+
+These are descriptive findings from generated demo data. They illustrate the kinds of questions the dashboard can answer; they should not be treated as evidence about a real coffee shop.
+
+### Dashboard Screenshots
+
+![Transaction dashboard overview](docs/images/dashboard-overview.png)
+
+![Sales and transaction breakdown](docs/images/sales-breakdown.png)
+
+### Database Write Reliability
+
+MySQL, Snowflake, and Power BI are separate destinations, so a write to all of them is not automatically one atomic transaction. If one destination accepts an update and another fails, their data may temporarily differ.
+
+In this project, a partial write is handled as follows: **[Describe what the application actually does—for example, which destination statuses it reports, whether it retries, and how you reconcile a transaction using `transaction_id`.]**
+
+**Current limitation:** [If there is no automatic retry or reconciliation, say so plainly and explain the manual recovery step.]
